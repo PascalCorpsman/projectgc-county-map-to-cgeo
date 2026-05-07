@@ -2,7 +2,7 @@
 
 In this repository i share all needed informations to create a .geojson map overlay that can be used in c:geo.
 
-The final result can for example look like this (in this case, all counties in which i have a found are either yellow or green, and all counties in which i have a T5 cache are green, counties where i have no founds are red): <br>
+The final result can for example look like shown below (in this case, all counties in which i have a found are either yellow or green, and all counties in which i have a T5 cache are green, counties where i have no founds are red): <br>
 
 ![](gfx/result_in_cgeo.jpg)
 
@@ -19,3 +19,19 @@ This tools have been successfully tested and run under Linux Mint Mate.
 ## Features
 - Download arbitrary county maps (filtered using project-gc)
 - Colorize county maps in any pattern
+
+## How to
+
+### Download .geojson files
+
+#### Setup the python script
+
+#### Run the script and download a .geojson file
+
+### Use the geojson colorizer for more colors
+
+#### Load and extract color lists
+
+#### Colorize the final map
+
+### Add the .geojson file into c:geo

@@ -1,6 +1,31 @@
-(*
- * 06.05.2026
- *)
+(******************************************************************************)
+(* geojson_colorizer                                               06.05.2026 *)
+(*                                                                            *)
+(* Version     : 0.01                                                         *)
+(*                                                                            *)
+(* Author      : Uwe Schächterle (Corpsman)                                   *)
+(*                                                                            *)
+(* Support     : www.Corpsman.de                                              *)
+(*                                                                            *)
+(* Description : Tool to extract county lists from .geojson, and to colorize  *)
+(*               counties in .geojson files                                   *)
+(*                                                                            *)
+(* License     : See the file license.md, located under:                      *)
+(*  https://github.com/PascalCorpsman/Software_Licenses/blob/main/license.md  *)
+(*  for details about the license.                                            *)
+(*                                                                            *)
+(*               It is not allowed to change or remove this text from any     *)
+(*               source file of the project.                                  *)
+(*                                                                            *)
+(* Warranty    : There is no warranty, neither in correctness of the          *)
+(*               implementation, nor anything other that could happen         *)
+(*               or go wrong, use at your own risk.                           *)
+(*                                                                            *)
+(* Known Issues: none                                                         *)
+(*                                                                            *)
+(* History     : 0.01 - Initial version                                       *)
+(*                                                                            *)
+(******************************************************************************)
 Unit Unit1;
 
 {$MODE objfpc}{$H+}
@@ -11,8 +36,10 @@ Uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ugeojson;
 
-Type
+Const
+  version = '0.01';
 
+Type
   { TForm1 }
 
   TForm1 = Class(TForm)
@@ -232,7 +259,7 @@ End;
 
 Procedure TForm1.FormCreate(Sender: TObject);
 Begin
-  caption := 'Geojson colorizer ver. 0.01, by Corpsman, www.Corpsman.de';
+  caption := 'Geojson colorizer ver. ' + version + ', by Corpsman, www.Corpsman.de';
   Memo1.Clear;
   fobj := TGEOJSON.create;
   edit1.text := '#ff3333';

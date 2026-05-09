@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 323
+  Height = 562
+  Top = 114
+  Width = 786
+  Caption = 'Form1'
+  ClientHeight = 562
+  ClientWidth = 786
+  Position = poScreenCenter
+  LCLVersion = '4.99.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 497
+    Caption = 'Read in .geojson'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 520
+    Height = 25
+    Hint = 'Dieser "HACK"'#13#10'resettet zuerst alles auf Rot'#13#10'Liest dann die Landkreise.txt ein und färbt diese Gelb'#13#10'Liest dann die T5erLandkreise.txt ein und färbt diese Grün'
+    Top = 344
+    Width = 256
+    Caption = 'HACK'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    Visible = False
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 520
+    Height = 25
+    Top = 384
+    Width = 256
+    Caption = 'Store as .geojson'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
+  object Edit1: TEdit
+    Left = 696
+    Height = 26
+    Top = 240
+    Width = 80
+    TabOrder = 3
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 696
+    Height = 26
+    Top = 274
+    Width = 80
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 696
+    Height = 26
+    Top = 304
+    Width = 80
+    TabOrder = 5
+    Text = 'Edit3'
+  end
+  object Memo1: TMemo
+    Left = 520
+    Height = 178
+    Top = 48
+    Width = 256
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 6
+  end
+  object PaintBox1: TPaintBox
+    Left = 8
+    Height = 500
+    Top = 48
+    Width = 500
+    OnPaint = PaintBox1Paint
+  end
+  object Button4: TButton
+    Left = 520
+    Height = 25
+    Top = 240
+    Width = 163
+    Caption = 'Reset all to'
+    TabOrder = 7
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 520
+    Height = 25
+    Top = 274
+    Width = 163
+    Caption = 'Set all from regionlist to'
+    TabOrder = 8
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 520
+    Height = 25
+    Top = 304
+    Width = 163
+    Caption = 'Set all from regionlist to'
+    TabOrder = 9
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 520
+    Height = 25
+    Top = 523
+    Width = 256
+    Caption = 'Close'
+    TabOrder = 10
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 520
+    Height = 25
+    Top = 8
+    Width = 168
+    Caption = 'Extract regions with'
+    TabOrder = 11
+    OnClick = Button8Click
+  end
+  object Edit4: TEdit
+    Left = 696
+    Height = 26
+    Top = 8
+    Width = 80
+    TabOrder = 12
+    Text = 'Edit4'
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.geojson'
+    Filter = 'GeoJSON|*.geojson|All|*'
+    Left = 200
+    Top = 96
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.geojson'
+    Filter = 'GeoJSON|*.geojson|All|*'
+    Left = 104
+    Top = 96
+  end
+  object OpenDialog2: TOpenDialog
+    DefaultExt = '.txt'
+    Filter = 'Regionlist|*.txt|All|*'
+    Left = 440
+    Top = 272
+  end
+  object SaveDialog2: TSaveDialog
+    DefaultExt = '.txt'
+    Filter = 'Regionlist|*.txt|All|*'
+    Left = 542
+    Top = 70
+  end
+end

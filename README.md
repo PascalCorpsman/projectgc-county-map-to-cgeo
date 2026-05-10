@@ -150,3 +150,10 @@ That's it
 (5) Here you can temporarily disable the overlay<br>
 (6) Here you can remove the overlay
 
+### [Optional] GeoJSON file size reduction
+
+When creating .geojson files with the procedure shown above, the multipolygons are very precise and large in file size (e.g., the Germany map is 40MB in size). While c:geo can handle that, we don't need that precision. I prefer fast loading times instead, so I added the "shrink_geojson.py" script (also created using AI tools). This can shrink the file size of the .geojson files dramatically. When applied to my Germany map, I was able to reduce the file size from 40MB down to 4.4MB without any noticeable decrease in precision.
+
+The usage of the script is quite simple and is shown below:<br>
+
+![](gfx/geojson_filesize_shrinking.png)

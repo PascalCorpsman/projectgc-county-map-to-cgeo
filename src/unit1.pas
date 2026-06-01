@@ -1,7 +1,7 @@
 (******************************************************************************)
 (* geojson_colorizer                                               06.05.2026 *)
 (*                                                                            *)
-(* Version     : 0.01                                                         *)
+(* Version     : 0.02                                                         *)
 (*                                                                            *)
 (* Author      : Uwe Schächterle (Corpsman)                                   *)
 (*                                                                            *)
@@ -24,6 +24,7 @@
 (* Known Issues: none                                                         *)
 (*                                                                            *)
 (* History     : 0.01 - Initial version                                       *)
+(*               0.02 - Add dialog when export is finished.                   *)
 (*                                                                            *)
 (******************************************************************************)
 Unit Unit1;
@@ -37,7 +38,7 @@ Uses
   ugeojson;
 
 Const
-  Version = '0.01';
+  Version = '0.02';
 
 Type
   { TForm1 }
@@ -164,6 +165,7 @@ Procedure TForm1.Button3Click(Sender: TObject);
 Begin
   If SaveDialog1.Execute Then Begin
     fobj.ExportAs(SaveDialog1.FileName);
+    showmessage('Finished');
   End;
 End;
 
